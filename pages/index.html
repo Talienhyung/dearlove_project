@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap"
+    />
+    <title>OneLove</title>
+</head>
+
+<body>
+
+    {{if eq .Page "FIRST"}}
+    <form action="/a" method="post">
+        <button type="submit" name="name" value="there">Come here</button>
+    </form>
+    {{end}}
+
+</body>
+
+</html>

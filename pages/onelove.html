@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap"
+    />
+  <title>One Love</title>
+  <style>
+    #output {
+      font-size: 50px;
+      text-align: center;
+      margin-top: 20vh;
+      font-family: Kodchasan;
+    }
+    .button {
+      font-size: 20px;
+      text-align: center;
+      font-family: Kodchasan;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="output"></div>
+
+<form class="button" action="/a" method="post">
+  <button type="submit" name="name" value="nomore">Skip</button>
+</form>
+
+<script>
+  // Define an array of sentences
+  var sentences = [
+    "While I wanted to give you my world, I realised that it would never be equal to my love for you.",
+    "I don't know where I'm going with this project.",
+    "I don't know what I want.",
+    "I let myself be carried away by the music in my ears",
+  ];
+
+  // Function to display sentences one at a time with a delay
+  function displaySentences(index) {
+    var outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = sentences[index];
+    
+    // Move to the next sentence after a 3-second delay
+    setTimeout(function() {
+      if (index < sentences.length - 1) {
+        displaySentences(index + 1);
+      }
+    }, 4000);
+  }
+
+  // Start displaying sentences
+  displaySentences(0);
+</script>
+
+</body>
+</html>
